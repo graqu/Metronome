@@ -17,7 +17,7 @@ let lastClickTime = 0
 
 const handleSlider = () => {
 	tempo = parseInt(1000 / (tempoSlider.value / 60))
-	console.log(tempo)
+	// console.log(tempo)
 	tempoInfo.textContent = tempoSlider.value
 	bpm !== undefined ? runMetronome() : {}
 }
@@ -30,10 +30,10 @@ const runBeat = () => {
 
 	if (count % timeSignature === 0) {
 		audio1.play()
-		console.log('pu')
+		// console.log('pu')
 	} else {
 		audio.play()
-		console.log('ka')
+		// console.log('ka')
 	}
 	count++
 }
@@ -50,7 +50,7 @@ const handleKeyboard = e => {
 }
 const changeTempo = e => {
 	timeSignature = parseInt(e.target.getAttribute('data-signature'))
-	console.log(timeSignature)
+	// console.log(timeSignature)
 }
 const changeSound = e => {
 	const sound = e.target.getAttribute('data-voice')
@@ -68,7 +68,7 @@ const changeSound = e => {
 			audio1 = new Audio('./media/tom.wav')
 			break
 		default:
-			console.log('nic')
+			// console.log('nic')
 			break
 	}
 }
@@ -97,12 +97,12 @@ const tapTempo = e => {
 		tempoInfo.textContent = parseInt(60000 / clickTime)
 		tempoSlider.value = parseInt(60000 / clickTime)
 	} else if (clickTime <= 214) {
-		console.log('za szybko')
+		// console.log('za szybko')
 		tempo = 214
 		tempoInfo.textContent = 280
 		tempoSlider.value = 280
 	} else {
-		console.log('za wolno')
+		// console.log('za wolno')
 		tempo = 1200
 		tempoInfo.textContent = 50
 		tempoSlider.value = 50
