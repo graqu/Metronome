@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="metronome">
+            <h1>Metronom</h1>
+            <input class="tempo-bar" type="range" name="tempo" id="tempo" min="50" max="280" value="100">
+            <div class="metronome__parameters">
+                <p>tempo: <span class="tempo-info">100</span> bpm</p>
+                <div class="metronome__blink"></div>
+                <div class="metronome__parameters--tempo"> <button class="btn tempo-btn zero"
+                        data-signature="0">1/1</button>
+                    <button class="btn tempo-btn fours" data-signature="4">4/4</button>
+                    <button class="btn tempo-btn threes" data-signature="3">3/4</button>
+                </div>
+                <div class="metronome__parameters--voice">
+                    <button class="btn sound-btn threes" data-voice="dog">🐶</button>
+                    <button class="btn sound-btn threes" data-voice="plates">🥢</button>
+                    <button class="btn sound-btn threes" data-voice="toms">🥁</button>
+                </div>
+                <div>
+                    <button class="btn tap-tempo">Tap tempo (T)</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>copyright | Jacek Wiącek</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

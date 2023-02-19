@@ -1,0 +1,77 @@
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	.metronome {
+		position: relative;
+		padding: 20px;
+		border-radius: 10px;
+		background-color: #fff;
+		cursor: pointer;
+		text-align: center;
+		&__blink {
+			margin: 20px;
+			width: 30px;
+			height: 30px;
+			background-color: red;
+			border-radius: 50%;
+			&:hover {
+				background-color: gold;
+			}
+		}
+		.tempo-bar {
+			width: 100%;
+		}
+		&__parameters {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+	h1 {
+		margin-bottom: 10px;
+	}
+	.btn {
+		padding: 1em 2em;
+		margin: 3px;
+		border: none;
+		background-color: #ddd;
+		transition: background-color 0.3s;
+		cursor: pointer;
+		user-select: none;
+		&:hover {
+			background-color: #929292;
+		}
+	}
+	.tap-tempo {
+		width: 95%;
+		transition: background-color 0.3s;
+		&:active {
+			background-color: red;
+		}
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
