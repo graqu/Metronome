@@ -26,7 +26,6 @@ body {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
-  cursor: pointer;
   text-align: center;
 }
 .main .metronome__blink {
@@ -35,8 +34,12 @@ body {
   height: 30px;
   background-color: red;
   border-radius: 50%;
+  cursor: pointer;
 }
 .main .metronome__blink:hover {
+  background-color: gold;
+}
+.main .metronome .pulse {
   background-color: gold;
 }
 .main .metronome .tempo-bar {
@@ -68,6 +71,7 @@ body {
 .main .tap-tempo {
   width: 95%;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 .main .tap-tempo:active {
   background-color: red;

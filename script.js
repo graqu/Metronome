@@ -30,12 +30,22 @@ const runBeat = () => {
 
 	if (count % timeSignature === 0) {
 		audio1.play()
+		blink.classList.toggle('pulse')
 		// console.log('pu')
 	} else {
 		audio.play()
+		blink.classList.toggle('pulse')
 		// console.log('ka')
 	}
 	count++
+}
+const handleBlinker = () => {
+	if (bpm === undefined) {
+		runMetronome()
+	} else {
+		clearInterval(bpm)
+		bpm = undefined
+	}
 }
 const runMetronome = () => {
 	clearInterval(bpm)
@@ -111,7 +121,8 @@ const tapTempo = e => {
 	bpm !== undefined ? runMetronome() : {}
 }
 
-blink.addEventListener('click', runMetronome)
+// blink.addEventListener('click', runMetronome)
+blink.addEventListener('click', handleBlinker)
 tempoSlider.addEventListener('input', handleSlider)
 window.addEventListener('keydown', handleKeyboard)
 tempoBtns.forEach(btn => btn.addEventListener('click', changeTempo))
